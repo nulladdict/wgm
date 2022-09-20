@@ -45,7 +45,7 @@ await $(`sudo apt install resolvconf wireguard -y`);
 await $(`sudo apt install ufw`);
 await $(`sudo ufw allow ssh`);
 await $(`sudo ufw allow ${server_port}/udp`);
-await $(`sudo ufw enable`);
+await $(`echo "y" | sudo ufw enable`);
 
 await $(`
 cd /etc/wireguard;
